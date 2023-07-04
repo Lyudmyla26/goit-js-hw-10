@@ -34,12 +34,12 @@ function createMarkup(data) {
   const imageUrl = data[0].url;
   const markup = data[0].breeds
     .map(breed => {
-      return `<img class="breed-image" alt=${breed.name} src=${imageUrl}>
+      return `<div class ="breed"><img class="breed-image" alt=${breed.name} src=${imageUrl}>
                           <div class="breed-container">
                           <h2 class="breed-name"> ${breed.name}</h2>
                           <p class="breed-temperament"> ${breed.temperament}</p>
                           <p class="breed-description"> ${breed.description}</p>
-                      </div>`;
+                      </div></div>`;
     })
     .join('');
 
